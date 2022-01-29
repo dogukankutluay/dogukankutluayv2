@@ -1,0 +1,95 @@
+@font-face {
+  font-family: poppinsRegular;
+  src: url(../assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: poppinsRegular1;
+  src: url(../assets/fonts/Poppins/Poppins-Light.ttf);
+}
+.projects {
+  margin-top: 3rem;
+  .projectsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 2rem 0;
+    h1 {
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-size: 24px;
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      li {
+        margin: 0 10px;
+        cursor: pointer;
+        color: white;
+        font-family: poppinsRegular, sans-serif;
+        font-size: 13px;
+      }
+      .activeLi {
+        color: #51b2fc;
+      }
+    }
+  }
+  .projectsContent {
+    .projectItem {
+      cursor: crosshair;
+      background-color: #142f42;
+      margin-right: 3rem;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      padding: 3rem;
+      h1 {
+        color: white;
+        margin-bottom: 0.2rem;
+        font-family: 'Poppins', sans-serif;
+      }
+      span {
+        color: #d8d5d5;
+        font-size: 12px;
+        font-family: poppinsRegular, sans-serif;
+      }
+      p {
+        color: #d8d5d5;
+        font-family: poppinsRegular1, sans-serif;
+        font-size: 14px;
+        line-height: 25px;
+        margin-top: 1.7rem;
+      }
+      .codes {
+        display: flex;
+        align-items: center;
+        margin: 1.2rem 0;
+        div {
+          margin-right: 2px;
+          color: #d8d5d5;
+          font-size: 14px;
+          span {
+            font-size: 17px;
+            color: white !important;
+          }
+        }
+      }
+      a {
+        svg {
+          width: 14px;
+        }
+      }
+    }
+    .projectItem:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 10px 5px 15px;
+      background-color: #1a374d;
+    }
+  }
+}
+@media (max-width: 720px) {
+  .projectItem {
+    margin: 0 !important;
+    margin-top: 1rem !important;
+  }
+}

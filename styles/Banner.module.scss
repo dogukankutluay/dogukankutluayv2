@@ -1,0 +1,81 @@
+@font-face {
+  font-family: poppinsExtraLight;
+  src: url(../assets/fonts/Poppins/Poppins-ExtraLight.ttf);
+}
+.banner {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .myAvatar {
+    border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+      rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.521) !important;
+  }
+  .myNameWr {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    h1 {
+      margin-right: 10px;
+      font-weight: 100;
+      font-family: poppinsExtraLight, sans-serif;
+    }
+    span {
+      font-family: 'Poppins', sans-serif;
+    }
+  }
+  .desc {
+    color: rgb(216, 213, 213);
+    text-align: center;
+    font-family: poppinsExtraLight, sans-serif;
+    line-height: 20px;
+    width: 60%;
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    li {
+      margin: 0 10px;
+      a {
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 10px;
+          width: 15px;
+        }
+        span {
+          color: white;
+          font-size: 13px;
+          font-family: 'Poppins', sans-serif;
+        }
+      }
+      a:hover {
+        svg {
+          path {
+            fill: #1a9cff;
+          }
+        }
+        span {
+          color: #1a9cff;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 720px) {
+  .myNameWr {
+    font-size: 35px !important;
+  }
+  .desc {
+    width: 80% !important;
+    font-size: 22px !important;
+    line-height: 27px !important;
+  }
+}

@@ -1,0 +1,102 @@
+@font-face {
+  font-family: poppinsRegular;
+  src: url(../assets/fonts/Poppins/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: poppinsThin;
+  src: url(../assets/fonts/Poppins/Poppins-ExtraLight.ttf);
+}
+
+.contact {
+  padding-bottom: 3rem;
+  .contactHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 2rem 0;
+    h1 {
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-size: 24px;
+    }
+    a {
+      background: transparent;
+      padding: 0.7rem 2rem;
+      border: 1px solid #1a9cff;
+      border-radius: 5px;
+      color: #1a9cff;
+      font-family: poppinsRegular, sans-serif;
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 1rem;
+        path {
+          fill: #1a9cff;
+        }
+      }
+    }
+    a:hover {
+      opacity: 0.9;
+    }
+  }
+  .contactContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    .contactPhoto {
+      border-radius: 40px;
+      object-fit: cover;
+      box-shadow: rgba(0, 0, 0, 0.144) 0px 5px 15px;
+    }
+    .letMeetWr {
+      margin-left: 2rem;
+      h1 {
+        color: white;
+        font-family: poppinsRegular, sans-serif;
+      }
+      .availeble {
+        color: #d8d5d5;
+        font-family: poppinsThin, sans-serif;
+        margin-top: 0.5rem;
+        display: flex;
+        align-items: center;
+        span {
+          margin-right: 0.5rem;
+          width: 15px;
+          height: 15px;
+          display: block;
+          border-radius: 7.5px;
+          background-color: #1a9cff;
+        }
+        .date {
+          font-size: 13px;
+        }
+      }
+      p {
+        font-size: 14px;
+        margin-top: 1.5rem;
+        font-family: poppinsThin, sans-serif;
+
+        color: #d8d5d5;
+      }
+    }
+  }
+}
+@media (max-width: 720px) {
+  .contactContent {
+    flex-direction: column !important;
+    width: 100% !important;
+    .letMeetWr {
+      margin-top: 2.5rem;
+      h1 {
+        font-size: 18px !important;
+      }
+      p {
+        font-size: 18px !important;
+      }
+    }
+  }
+}
