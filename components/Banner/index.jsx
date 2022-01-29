@@ -20,8 +20,7 @@ function Banner() {
       <p className={styles.desc}>
         Hi, I am Doğukan, I have been involved in many projects under the name
         of MERN stack. Currently, the metaverse universe is among the areas
-        where I develop myself, and I do this with the three.js(React Three
-        Fiber) library.
+        where I develop myself, and I do this with the three.js.
       </p>
       <ul className={styles.social}>
         <li>
