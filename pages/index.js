@@ -1,12 +1,31 @@
 import Head from 'next/head';
-import {
-  Banner,
-  Contact,
-  Footer,
-  Navigation,
-  Projects,
-  Skills,
-} from '../components';
+// import {
+//   Banner,
+//   Contact,
+//   Footer,
+//   Navigation,
+//   Projects,
+//   Skills,
+// } from '../components';
+import dynamic from 'next/dynamic';
+const Navigation = dynamic(() => import('../components/Navigation'), {
+  ssr: false,
+});
+const Banner = dynamic(() => import('../components/Banner'), {
+  ssr: false,
+});
+const Contact = dynamic(() => import('../components/Contact'), {
+  ssr: false,
+});
+const Footer = dynamic(() => import('../components/Footer'), {
+  ssr: false,
+});
+const Projects = dynamic(() => import('../components/Projects'), {
+  ssr: false,
+});
+const Skills = dynamic(() => import('../components/Skills'), {
+  ssr: false,
+});
 export default function Home() {
   return (
     <div>
@@ -26,12 +45,14 @@ export default function Home() {
       </div>
       <div className="container-contact">
         <div className="container-contact-wr">
+          {' '}
           <Contact />
         </div>
       </div>
 
       <div className="container">
-        <Footer />
+        {' '}
+        <Footer />{' '}
       </div>
     </div>
   );

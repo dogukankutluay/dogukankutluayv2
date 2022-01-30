@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../../styles/Projects.module.scss';
 import { ButtonWr } from '..';
-import { RightArrowIcon } from '../../assets/icons';
-import { Carousel } from '@trendyol-js/react-carousel';
+import {
+  RightArrowIcon,
+  SliderArrowLeft,
+  SliderArrowRight,
+} from '../../assets/icons';
+// import { Carousel } from '@trendyol-js/react-carousel';
+import Carousel from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
 const projectsData = [
   {
     name: 'SOCKET TEMPLATE NODE',
@@ -38,7 +44,6 @@ const ProjectItem = ({ item }) => {
     <div className={styles.projectItem}>
       <h1>{item.name}</h1>
       <span>{item.date}</span>
-      {/* <p>{item.desc}</p> */}
       <div className={styles.codes}>
         {item.codes.map((code, i) => {
           return (
@@ -55,7 +60,7 @@ const ProjectItem = ({ item }) => {
     </div>
   );
 };
-function useWindowSize() {
+export function useWindowSize() {
   // Initialize state with undefined width/height so server and client renders match
   // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
   const [windowSize, setWindowSize] = useState({
@@ -89,26 +94,59 @@ function useWindowSize() {
 }
 function Projects() {
   const size = useWindowSize();
+  const [swipe, setSwipe] = useState(0);
+  const onChange = value => {
+    setSwipe(value);
+  };
+  const DESKTOP = {
+    styleLeft: swipe === 0 ? { opacity: '0.4' } : {},
+    styleRight: swipe === 1 ? { opacity: '0.4' } : {},
+    disabledLeft: swipe === 0 ? true : false,
+    disabledRight: swipe === 1 ? true : false,
+  };
+  const MOBILE = {
+    styleLeft: swipe === 0 ? { opacity: '0.4' } : {},
+    styleRight: swipe === projectsData.length - 1 ? { opacity: '0.4' } : {},
+    disabledLeft: swipe === 0 ? true : false,
+    disabledRight: swipe === projectsData.length - 1 ? true : false,
+  };
   return (
     <section id="projects" className={styles.projects}>
       <div className={styles.projectsHeader}>
         <h1>PROJECTS</h1>
-        {/* <ul className={styles.tabs}>
-          <li className={styles.activeLi}>JAVASCRİPT</li>
-          <li>SASS</li>
-          <li>TYPESCRIPT</li>
-        </ul> */}
+
         <ButtonWr
           href="https://github.com/dogukankutluay"
           text="ALL MY WORKS"
         />
       </div>
       <div className={styles.projectsContent}>
-        <Carousel show={size.width < 700 ? 1 : 2.5} slide={1} swiping={true}>
+        <Carousel
+          itemWidth={size.width < 700 ? '' : '50%'}
+          onChange={onChange}
+          value={swipe}>
           {projectsData.map((item, index) => {
             return <ProjectItem key={index} item={item} />;
           })}
         </Carousel>
+      </div>
+      <div className={styles.sliderAction}>
+        <button
+          style={size.width < 700 ? MOBILE.styleLeft : DESKTOP.styleLeft}
+          disabled={
+            size.width < 700 ? MOBILE.disabledLeft : DESKTOP.disabledLeft
+          }
+          onClick={() => setSwipe(swipe - 1)}>
+          <SliderArrowLeft />
+        </button>
+        <button
+          style={size.width < 700 ? MOBILE.styleRight : DESKTOP.styleRight}
+          disabled={
+            size.width < 700 ? MOBILE.disabledRight : DESKTOP.disabledRight
+          }
+          onClick={() => setSwipe(swipe + 1)}>
+          <SliderArrowRight />
+        </button>
       </div>
     </section>
   );

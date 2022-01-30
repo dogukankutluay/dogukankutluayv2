@@ -44,6 +44,8 @@
       margin-top: 1rem;
       margin-left: 1rem;
       padding: 3rem;
+      width: 300px;
+      height: 90%;
       h1 {
         color: white;
         margin-bottom: 0.2rem;
@@ -86,9 +88,24 @@
       background-color: #1a374d;
     }
   }
+  .sliderAction {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    button {
+      cursor: pointer;
+      background: transparent;
+      svg {
+        path {
+          fill: #1a9cff;
+        }
+      }
+    }
+  }
 }
 @media (max-width: 720px) {
   .projectItem {
+    width: 100% !important;
     margin: 0 !important;
     margin-top: 1rem !important;
   }

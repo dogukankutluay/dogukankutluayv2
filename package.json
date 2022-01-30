@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@brainhubeu/react-carousel": "^2.0.4",
     "@trendyol-js/react-carousel": "^2.0.1",
     "next": "12.0.9",
     "react": "17.0.2",
