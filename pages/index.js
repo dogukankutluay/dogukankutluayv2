@@ -54,7 +54,7 @@ export default function Home() {
           <Bookmarks />
         </div>
       </div>
-       */}
+        */}
       <div className="container">
         <Skills />
       </div>
