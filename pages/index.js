@@ -30,7 +30,7 @@ const Skills = dynamic(() => import("../components/Skills"), {
  * const Bookmarks = dynamic(() => import('../components/Bookmarks'), {
   ssr: fals e,
 })
- *     */
+ *      */
 export default function Home() {
   return (
     <div>
