@@ -8,3 +8,4 @@ export { default as Twitter } from './Twitter';
 export { default as ButtonWr } from './Button';
 export { default as Skills } from './Skills';
 export { default as Contact } from './Contact';
+export { default as Bookmarks } from './Bookmarks';

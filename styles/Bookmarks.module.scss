@@ -1,0 +1,155 @@
+.bookmarks {
+  .bookmarksHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 2rem 0;
+    h1 {
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-size: 24px;
+    }
+    .inputWr {
+      position: relative;
+      display: flex;
+      align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      input {
+        background-color: white;
+        padding: 0.4rem 0.7rem;
+        border-radius: 5px;
+        font-family: 'Poppins', sans-serif;
+      }
+      input:focus {
+        outline: none !important;
+        box-shadow: 0 0 5px #719ece;
+      }
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        font-size: 12px;
+        background-color: rgba(128, 128, 128, 0.707);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        right: 0;
+        margin-right: 0.5rem;
+        position: absolute;
+        cursor: pointer;
+      }
+    }
+  }
+  .bookmarksContent {
+    margin-top: 1rem;
+    .bookmarksList {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between !important;
+      .bookmark {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        box-sizing: border-box;
+        width: 80%;
+        font-family: 'Poppins', sans-serif;
+        background-color: #142f42;
+        color: white;
+        margin: auto;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        .left {
+          width: 60%;
+          h1 {
+            margin-bottom: 1rem;
+          }
+          p {
+            font-family: poppinsExtraLight, sans-serif;
+            line-height: 25px;
+            font-size: 14px;
+            width: 70%;
+            margin-bottom: 0.5rem;
+          }
+          h2 {
+            font-size: 12px;
+            color: rgba(208, 208, 208, 0.802);
+          }
+        }
+        .right {
+          width: 40%;
+          .tags {
+            display: flex;
+            flex-wrap: wrap;
+            span {
+              font-size: 12px;
+              padding: 10px 5px;
+              margin-right: 10px;
+              margin-bottom: 10px;
+              border: 1px solid rgb(216, 213, 213);
+              border-radius: 10px;
+              color: rgb(216, 213, 213);
+              font-family: poppinsExtraLight, sans-serif;
+            }
+            span:hover {
+              // border-color: #1a9cff;
+              box-shadow: 0 0 5px #719ece;
+            }
+          }
+        }
+      }
+    }
+    .bookmarksPagination {
+      width: 80%;
+      margin: auto;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button,
+      svg,
+      h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      button {
+        background-color: transparent;
+        font-family: 'Poppins', sans-serif;
+        font-size: 40px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 40px;
+      }
+    }
+  }
+}
+@media (max-width: 720px) {
+  .bookmarksHeader {
+    flex-direction: column;
+    align-items: flex-start !important;
+    h1 {
+      margin-bottom: 1rem;
+    }
+    .inputWr {
+      width: 100%;
+      input {
+        width: 100%;
+      }
+    }
+  }
+  .bookmark {
+    flex-direction: column;
+    width: 100% !important;
+    .left,
+    .right {
+      width: 100% !important;
+    }
+    .left {
+      margin-bottom: 2rem;
+    }
+  }
+}

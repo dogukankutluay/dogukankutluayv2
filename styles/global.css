@@ -164,10 +164,16 @@ img {
   width: 85%;
   margin: auto;
 }
-.container-contact {
+.container-contact,
+.container-bookmarks {
   background-color: #0d2333;
 }
-.container-contact-wr {
+.container-contact-wr,
+.container-bookmarks-wr {
   width: 85%;
   margin: auto;
+}
+.container-bookmarks-wr {
+  padding: 5rem 0rem;
+  box-sizing: border-box;
 }

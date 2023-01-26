@@ -11,11 +11,11 @@ import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 const projectsData = [
   {
-    name: 'SOCKET TEMPLATE NODE',
+    name: 'WORLDE NO TIME',
     date: 'NOVEMBER 5, 2021',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat a officiis omnis laudantium totam consequuntur',
-    codes: ['JavaScript', 'Express', 'Socket'],
-    href: 'https://github.com/dogukankutluay/socket-template-node',
+    codes: ['React', 'Redux'],
+    href: 'https://github.com/dogukankutluay/WordleNoTime',
   },
   {
     name: 'SOCKET TEMPLATE REACT',
