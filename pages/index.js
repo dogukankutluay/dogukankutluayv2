@@ -53,8 +53,8 @@ export default function Home() {
        * <div className="container-bookmarks">
         <div className="container-bookmarks-wr">
           <Bookmarks />
-        </div>
-      </div>
+         </div>
+      </div> 
       */}
       <div className="container">
         <Skills />
