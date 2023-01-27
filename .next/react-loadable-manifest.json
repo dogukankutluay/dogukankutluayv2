@@ -5,6 +5,12 @@
       "static/chunks/components_Banner_index_jsx.js"
     ]
   },
+  "index.js -> ../components/Bookmarks": {
+    "id": "index.js -> ../components/Bookmarks",
+    "files": [
+      "static/chunks/components_Bookmarks_index_jsx.js"
+    ]
+  },
   "index.js -> ../components/Contact": {
     "id": "index.js -> ../components/Contact",
     "files": [

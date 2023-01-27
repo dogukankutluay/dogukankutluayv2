@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../../styles/Bookmarks.module.scss';
 import bookmarksData from '../../bookmarks.json';
-import { SliderArrowLeft, SliderArrowRight } from '../../assets/icons';
+//import { SliderArrowLeft, SliderArrowRight } from '../../assets/icons';
 const BookMark = ({ item }) => {
   return (
     <a
@@ -28,6 +28,19 @@ const BookMark = ({ item }) => {
 };
 function Bookmarks() {
   const [value, setValue] = useState('');
+  const [_, setBookMarks] = useState([]);
+
+  useEffect(()=>{
+      setBookMarks(bookmarksData)
+  },[])
+  const onChange=(e)=>{
+    const inputValue=e.target.value
+    setBookMarks(items=>items.filter(item=>{
+      const value=item.desc+item.title
+      if(String(value).includes(inputValue)) return item
+    }))
+    setValue(inputValue)
+  }
   return (
     <section id="bookmarks" className={styles.bookmarks}>
       <div className={styles.bookmarksHeader}>
@@ -35,7 +48,7 @@ function Bookmarks() {
 
         <div className={styles.inputWr}>
           <input
-            onChange={e => setValue(e.target.value)}
+            onChange={onChange}
             value={value}
             type="text"
             placeholder="Search "
@@ -45,11 +58,17 @@ function Bookmarks() {
       </div>
       <div className={styles.bookmarksContent}>
         <div className={styles.bookmarksList}>
-          {bookmarksData.slice(0, 3).map((item, index) => (
+          {bookmarksData.map((item, index) => (
             <BookMark key={index} item={item} />
           ))}
         </div>
-        <div className={styles.bookmarksPagination}>
+       
+      </div>
+    </section>
+  );
+}
+/**
+ *   <div className={styles.bookmarksPagination}>
           <button>
             <SliderArrowLeft />
           </button>
@@ -63,9 +82,5 @@ function Bookmarks() {
             <SliderArrowRight />
           </button>
         </div>
-      </div>
-    </section>
-  );
-}
-
+ */
 export default Bookmarks;

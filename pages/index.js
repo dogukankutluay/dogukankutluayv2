@@ -1,12 +1,15 @@
 import Head from "next/head";
-// import {
-//   Banner,
-//   Contact,
-//   Footer,
-//   Navigation,
-//   Projects,
-//   Skills,
-// } from '../components';
+/**
+ * import {
+  Banner,
+  Contact,
+  Footer,
+  Navigation,
+  Projects,
+  Skills,
+  Bookmarks,
+} from "../components";
+ */
 import dynamic from "next/dynamic";
 const Navigation = dynamic(() => import("../components/Navigation"), {
   ssr: false,
@@ -26,11 +29,9 @@ const Projects = dynamic(() => import("../components/Projects"), {
 const Skills = dynamic(() => import("../components/Skills"), {
   ssr: false,
 });
-/**
- * const Bookmarks = dynamic(() => import('../components/Bookmarks'), {
-  ssr: fals e,
-})
- *      */
+const Bookmarks = dynamic(() => import("../components/Bookmarks"), {
+  ssr: false,
+});
 export default function Home() {
   return (
     <div>
@@ -48,13 +49,13 @@ export default function Home() {
         <Projects />
       </div>
 
-      {/**
+      {/** 
        * <div className="container-bookmarks">
         <div className="container-bookmarks-wr">
           <Bookmarks />
         </div>
       </div>
-        */}
+      */}
       <div className="container">
         <Skills />
       </div>
