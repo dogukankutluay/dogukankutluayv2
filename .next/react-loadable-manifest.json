@@ -29,12 +29,6 @@
       "static/chunks/components_Navigation_index_jsx.js"
     ]
   },
-  "index.js -> ../components/Projects": {
-    "id": "index.js -> ../components/Projects",
-    "files": [
-      "static/chunks/components_Projects_index_jsx-components_index_jsx.js"
-    ]
-  },
   "index.js -> ../components/Skills": {
     "id": "index.js -> ../components/Skills",
     "files": [

@@ -23,9 +23,11 @@ const Contact = dynamic(() => import("../components/Contact"), {
 const Footer = dynamic(() => import("../components/Footer"), {
   ssr: true,
 });
-const Projects = dynamic(() => import("../components/Projects"), {
+/**
+ * const Projects = dynamic(() => import("../components/Projects"), {
   ssr: false,
 });
+ */
 const Skills = dynamic(() => import("../components/Skills"), {
   ssr: true,
 });
@@ -46,7 +48,6 @@ export default function Home() {
       <div className="container">
         <Navigation />
         <Banner />
-        <Projects />
       </div>
 
       <div className="container-bookmarks">

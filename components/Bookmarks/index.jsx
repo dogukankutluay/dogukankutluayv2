@@ -6,7 +6,7 @@ const BookMark = ({ item }) => {
   return (
     <a
       className={styles.bookmark}
-      without
+      without='true'
       rel="noreferrer"
       target="_blank"
       href={item.href}>
