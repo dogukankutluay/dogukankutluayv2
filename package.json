@@ -6,11 +6,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy":"curl -X POST https://api.vercel.com/v1/integrations/deploy/prj_0YKpbp5ASBHvFql0yHfvwwVR228N/cd0roGxIQ9"
+    "deploy": "curl -X POST https://api.vercel.com/v1/integrations/deploy/prj_0YKpbp5ASBHvFql0yHfvwwVR228N/cd0roGxIQ9"
   },
   "dependencies": {
     "@brainhubeu/react-carousel": "^2.0.4",
     "@trendyol-js/react-carousel": "^2.0.1",
+    "@vercel/analytics": "^0.1.8",
     "next": "12.0.9",
     "react": "17.0.2",
     "react-dom": "17.0.2",
