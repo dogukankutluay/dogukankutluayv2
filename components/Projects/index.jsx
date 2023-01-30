@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+/**
+ * import React, { useState, useEffect } from 'react';
 import styles from '../../styles/Projects.module.scss';
 import { ButtonWr } from '..';
 import {
@@ -7,7 +8,6 @@ import {
   SliderArrowRight,
 } from '../../assets/icons';
 // import { Carousel } from '@trendyol-js/react-carousel';
-import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 const projectsData = [
   {
@@ -153,3 +153,5 @@ function Projects() {
 }
 
 export default Projects;
+
+ */
