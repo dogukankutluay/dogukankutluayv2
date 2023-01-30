@@ -12,25 +12,25 @@ import Head from "next/head";
  */
 import dynamic from "next/dynamic";
 const Navigation = dynamic(() => import("../components/Navigation"), {
-  ssr: false,
+  ssr: true,
 });
 const Banner = dynamic(() => import("../components/Banner"), {
-  ssr: false,
+  ssr: true,
 });
 const Contact = dynamic(() => import("../components/Contact"), {
-  ssr: false,
+  ssr: true,
 });
 const Footer = dynamic(() => import("../components/Footer"), {
-  ssr: false,
+  ssr: true,
 });
 const Projects = dynamic(() => import("../components/Projects"), {
   ssr: false,
 });
 const Skills = dynamic(() => import("../components/Skills"), {
-  ssr: false,
+  ssr: true,
 });
 const Bookmarks = dynamic(() => import("../components/Bookmarks"), {
-  ssr: false,
+  ssr: true,
 });
 export default function Home() {
   return (
@@ -49,13 +49,11 @@ export default function Home() {
         <Projects />
       </div>
 
-      {/** 
-       * <div className="container-bookmarks">
+      <div className="container-bookmarks">
         <div className="container-bookmarks-wr">
           <Bookmarks />
-          </div>
-      </div> 
-      */}
+        </div>
+      </div>
       <div className="container">
         <Skills />
       </div>
