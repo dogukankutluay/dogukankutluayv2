@@ -2643,6 +2643,14 @@
     "link": "nosir.github.io"
   },
   {
+    "title": "Serverless redis",
+    "href": "https://console.upstash.com/",
+    "picture": "https://rdl.ink/render/https%3A%2F%2Fnosir.github.io%2Fcleave.js?width=92&height=69&ar=&mode=crop&format=avif&dpr=1",
+    "desc": "Bu paket ile input yazılarınızı yazarken formatlayabilirsiniz.",
+    "tags": ["redis","cache"],
+    "link": "console.upstash.com"
+  },
+  {
     "title": "Stromno | Heart Rate from Apple Watch or Samsung Galaxy Watch On Twitch, YouTube, OBS",
     "href": "https://www.stromno.com/",
     "picture": "https://rdl.ink/render/https%3A%2F%2Fstatic.wixstatic.com%2Fmedia%2Fad2949_7fe7733f3d8e4407b3ebf595b253b4a9%257Emv2.png%2Fv1%2Ffit%2Fw_2500%2Ch_1330%2Cal_c%2Fad2949_7fe7733f3d8e4407b3ebf595b253b4a9%257Emv2.png?width=92&height=69&ar=&mode=crop&format=avif&dpr=1",
