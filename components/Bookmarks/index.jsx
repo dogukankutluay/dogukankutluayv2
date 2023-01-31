@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import styles from '../../styles/Bookmarks.module.scss';
-import bookmarksData from '../../bookmarks.json';
+import React, { useEffect, useState } from "react";
+import styles from "../../styles/Bookmarks.module.scss";
+import bookmarksData from "../../bookmarks.json";
 //import { SliderArrowLeft, SliderArrowRight } from '../../assets/icons';
 const BookMark = ({ item }) => {
   return (
@@ -8,7 +8,8 @@ const BookMark = ({ item }) => {
       className={styles.bookmark}
       rel="noreferrer"
       target="_blank"
-      href={item.href}>
+      href={item.href}
+    >
       <div className={styles.left}>
         <h1>{item.title}</h1>
         <p>{item.desc}</p>
@@ -26,20 +27,22 @@ const BookMark = ({ item }) => {
   );
 };
 function Bookmarks() {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
   const [_, setBookMarks] = useState([]);
 
-  useEffect(()=>{
-      setBookMarks(bookmarksData)
-  },[])
-  const onChange=(e)=>{
-    const inputValue=e.target.value
-    setBookMarks(items=>items.filter(item=>{
-      const value=item.desc+item.title
-      if(String(value).includes(inputValue)) return item
-    }))
-    setValue(inputValue)
-  }
+  useEffect(() => {
+    setBookMarks(bookmarksData);
+  }, []);
+  const onChange = (e) => {
+    const inputValue = e.target.value;
+    setBookMarks((items) =>
+      items.filter((item) => {
+        const value = item.desc + item.title;
+        if (String(value).includes(inputValue)) return item;
+      })
+    );
+    setValue(inputValue);
+  };
   return (
     <section id="bookmarks" className={styles.bookmarks}>
       <div className={styles.bookmarksHeader}>
@@ -52,7 +55,14 @@ function Bookmarks() {
             type="text"
             placeholder="Search "
           />
-          {value.length ? <span onClick={() => setValue('')}>x</span> : null}
+          {value.length ? (
+            <div
+              onClick={() => setValue("")}
+              className={styles.removeTextIconWr}
+            >
+              <span className={styles.removeTextIcon}>x</span>
+            </div>
+          ) : null}
         </div>
       </div>
       <div className={styles.bookmarksContent}>
@@ -61,7 +71,6 @@ function Bookmarks() {
             <BookMark key={index} item={item} />
           ))}
         </div>
-       
       </div>
     </section>
   );
