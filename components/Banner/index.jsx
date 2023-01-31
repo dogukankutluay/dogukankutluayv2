@@ -2,13 +2,15 @@ import React from 'react';
 import styles from '../../styles/Banner.module.scss';
 import Image from 'next/image';
 import myAvatar from '../../assets/images/avatar.jpg';
+import myProfile from '../../assets/images/dogukan-kutluay-profile.jpeg';
+
 import { InstagramIcon, LinkedinIcon } from '../../assets/icons';
 function Banner() {
   return (
     <section id="banner" className={styles.banner}>
       <Image
         className={styles.myAvatar}
-        src={myAvatar}
+        src={myProfile}
         width={200}
         height={200}
         alt="Doğukan Kutluay profil fotoğrafı"
