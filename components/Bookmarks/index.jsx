@@ -68,32 +68,18 @@ function Bookmarks() {
       </div>
       <div className={styles.bookmarksContent}>
         <div className={styles.bookmarksList}>
-          {stateBookMarks.length ? (
-            stateBookMarks.map((item, index) => (
-              <BookMark key={index} item={item} />
-            ))
-          ) : (
-            <div className={styles.emptyBookmarks}></div>
-          )}
+          {stateBookMarks.length
+            ? stateBookMarks.map((item, index) => (
+                <BookMark key={index} item={item} />
+              ))
+            : ""}
         </div>
+        {!stateBookMarks.length && (
+          <div className={styles.emptyBookmarks}>no rows to show</div>
+        )}
       </div>
     </section>
   );
 }
-/**
- *   <div className={styles.bookmarksPagination}>
-          <button>
-            <SliderArrowLeft />
-          </button>
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>4</button>
-          <h1>...</h1>
-          <button>34</button>
-          <button>
-            <SliderArrowRight />
-          </button>
-        </div>
- */
+
 export default Bookmarks;

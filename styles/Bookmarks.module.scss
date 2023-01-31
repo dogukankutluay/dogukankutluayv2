@@ -78,11 +78,22 @@
     &::-webkit-scrollbar-thumb:hover {
       background: #142f42; 
     }
+    .emptyBookmarks{
+      height: 100% !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgb(216, 213, 213);
+      text-align: center;
+      font-family: poppinsExtraLight, sans-serif;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+ 
     .bookmarksList {
       display: flex;
       flex-direction: column;
       justify-content: space-between !important;
-      height: 100%;
       .bookmark {
 
         display: flex;
@@ -136,20 +147,8 @@
           }
         }
       }
-      .emptyBookmarks{
-        height: 100% !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .emptyBookmarks::after{
-        content: 'no rows to show';
-        color: rgb(216, 213, 213);
-        text-align: center;
-        font-family: poppinsExtraLight, sans-serif;
-        text-transform: uppercase;
-        font-size: 14px;
-      }
+     
+     
     }
     .bookmarksPagination {
       width: 80%;
