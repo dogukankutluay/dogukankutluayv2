@@ -27,22 +27,9 @@ const BookMark = ({ item }) => {
   );
 };
 function Bookmarks() {
-  const [value, setValue] = useState("");
-  const [_, setBookMarks] = useState([]);
+  const [textValue, setValue] = useState("");
+  const [stateBookMarks, setStateBookMarks] = useState(bookmarksData);
 
-  useEffect(() => {
-    setBookMarks(bookmarksData);
-  }, []);
-  const onChange = (e) => {
-    const inputValue = e.target.value;
-    setBookMarks((items) =>
-      items.filter((item) => {
-        const value = item.desc + item.title;
-        if (String(value).includes(inputValue)) return item;
-      })
-    );
-    setValue(inputValue);
-  };
   return (
     <section id="bookmarks" className={styles.bookmarks}>
       <div className={styles.bookmarksHeader}>
@@ -50,14 +37,28 @@ function Bookmarks() {
 
         <div className={styles.inputWr}>
           <input
-            onChange={onChange}
-            value={value}
+            onChange={({ target: { value } }) => {
+              setValue(value);
+
+              if (value.length < 1) {
+                setStateBookMarks(bookmarksData);
+                return;
+              }
+              let newBookMarks = stateBookMarks.filter((item) =>
+                (item.desc + item.title).toLocaleLowerCase().includes(value)
+              );
+              setStateBookMarks(newBookMarks);
+            }}
+            value={textValue}
             type="text"
             placeholder="Search "
           />
-          {value.length ? (
+          {textValue.length ? (
             <div
-              onClick={() => setValue("")}
+              onClick={() => {
+                setValue("");
+                setStateBookMarks(bookmarksData);
+              }}
               className={styles.removeTextIconWr}
             >
               <span className={styles.removeTextIcon}>x</span>
@@ -67,9 +68,13 @@ function Bookmarks() {
       </div>
       <div className={styles.bookmarksContent}>
         <div className={styles.bookmarksList}>
-          {bookmarksData.map((item, index) => (
-            <BookMark key={index} item={item} />
-          ))}
+          {stateBookMarks.length ? (
+            stateBookMarks.map((item, index) => (
+              <BookMark key={index} item={item} />
+            ))
+          ) : (
+            <div className={styles.emptyBookmarks}></div>
+          )}
         </div>
       </div>
     </section>
