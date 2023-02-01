@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from '../../styles/Skills.module.scss';
+import React from "react";
+import styles from "../../styles/Skills.module.scss";
 import {
   JavaScript,
   TypeScript,
@@ -10,43 +10,56 @@ import {
   Git,
   Aws,
   Jira,
-} from '../../assets/icons';
+  Vercel,
+} from "../../assets/icons";
 const skillsData = [
   {
-    name: 'JavaScript',
+    name: "JavaScript",
     icon: <JavaScript />,
   },
   {
-    name: 'TypeScript',
+    name: "TypeScript",
     icon: <TypeScript />,
   },
   {
-    name: 'NodeJs',
+    name: "NodeJs",
     icon: <NodeJs />,
   },
   {
-    name: 'MongoDb',
+    name: "MongoDb",
     icon: <MongoDb />,
   },
   {
-    name: 'ReactJs',
+    name: "ReactJs",
     icon: <ReactJs />,
   },
   {
-    name: 'Sass',
+    name: "ReactNative",
+    icon: <ReactJs />,
+  },
+  {
+    name: "VueJS",
+    icon: <ReactJs />,
+  },
+  {
+    name: "Sass",
     icon: <Sass />,
   },
   {
-    name: 'Git',
+    name: "Git",
     icon: <Git />,
   },
 
   {
-    name: 'Aws',
+    name: "Aws",
     icon: <Aws />,
   },
   {
-    name: 'Jira & BitBucket',
+    name: "Vercel",
+    icon: <Vercel />,
+  },
+  {
+    name: "Jira & BitBucket",
     icon: <Jira />,
   },
 ];
