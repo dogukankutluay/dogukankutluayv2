@@ -1,36 +1,37 @@
-import React from 'react';
-import styles from '../../styles/Contact.module.scss';
-import { Email } from '../../assets/icons';
-import myPhoto from '../../assets/images/my-photo.jpg';
-import Image from 'next/image';
+import React from "react";
+import styles from "../../styles/Contact.module.scss";
+import { Email } from "../../assets/icons";
+import myPhoto from "../../assets/images/my-photo.jpg";
+import Image from "next/image";
 function Contact() {
   const date = new Date();
   const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
   let month = months[date.getMonth()];
-  let monthNumber = date.getMonth() + 1;
+  let day = date.getDate();
   let year = date.getFullYear();
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.contactHeader}>
-        <h1>Contact</h1>
+        <h1>CONTACT</h1>
 
         <a
           href="mailto:dogu_kutluay_1999@hotmail.com"
           target="_blank"
-          rel="noreferrer">
+          rel="noreferrer"
+        >
           <Email />
           DKUTLUAY
         </a>
@@ -48,7 +49,7 @@ function Contact() {
           <div className={styles.availeble}>
             <span></span>
             <div className={styles.date}>
-              {month + ' ' + monthNumber}, {year}
+              {month + " " + day}, {year}
             </div>
           </div>
           <p>

@@ -5,16 +5,10 @@ import Image from "next/image";
 function Navigation() {
   return (
     <header className={styles.header}>
-      <div className={styles.headerLogo}>
+      <a href="/" className={styles.headerLogo}>
         <Image width={50} height={50} src={logo} alt="Doğukan kutluay logo" />
-      </div>
+      </a>
       <ul className={styles.ul}>
-        {/**
-       *     <li>
-          <a href="#projects">PROJECTS</a>
-        </li>
-       */}
-
         <li>
           <a href="#contact">CONTACT</a>
         </li>

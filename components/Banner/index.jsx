@@ -1,18 +1,17 @@
-import React from 'react';
-import styles from '../../styles/Banner.module.scss';
-import Image from 'next/image';
-import myAvatar from '../../assets/images/avatar.jpg';
-import myProfile from '../../assets/images/dogukan-kutluay-profile.jpeg';
+import React from "react";
+import styles from "../../styles/Banner.module.scss";
+import Image from "next/image";
+import myProfile from "../../assets/images/dogukan-kutluay-profile.jpeg";
 
-import { InstagramIcon, LinkedinIcon } from '../../assets/icons';
+import { InstagramIcon, LinkedinIcon, Github } from "../../assets/icons";
 function Banner() {
   return (
     <section id="banner" className={styles.banner}>
       <Image
         className={styles.myAvatar}
         src={myProfile}
-        width={200}
-        height={200}
+        width={300}
+        height={300}
         alt="Doğukan Kutluay profil fotoğrafı"
       />
       <div className={styles.myNameWr}>
@@ -29,7 +28,8 @@ function Banner() {
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://www.linkedin.com/in/do%C4%9Fukan-kutluay-291367198/">
+            href="https://www.linkedin.com/in/do%C4%9Fukan-kutluay-291367198/"
+          >
             <LinkedinIcon />
             <span>linkedin</span>
           </a>
@@ -39,9 +39,20 @@ function Banner() {
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://www.instagram.com/dogukan_kutluay/">
+            href="https://www.instagram.com/dogukan_kutluay/"
+          >
             <InstagramIcon />
             <span>instagram</span>
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/dogukankutluay"
+          >
+            <Github />
+            <span>github</span>
           </a>
         </li>
       </ul>

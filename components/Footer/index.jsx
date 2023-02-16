@@ -1,24 +1,26 @@
-import React from 'react';
-import styles from '../../styles/Footer.module.scss';
-import { InstagramIcon, LinkedinIcon } from '../../assets/icons';
-import Image from 'next/image';
-import logo from '../../public/favicon.png';
+import React from "react";
+import styles from "../../styles/Footer.module.scss";
+import { InstagramIcon, LinkedinIcon } from "../../assets/icons";
+import Image from "next/image";
+import logo from "../../public/favicon.png";
 const socialDatas = [
   {
     icon: <InstagramIcon />,
-    href: 'https://www.instagram.com/',
+    href: "https://www.instagram.com/dogukan_kutluay/",
   },
   {
     icon: <LinkedinIcon />,
-    href: 'https://www.linkedin.com/in/do%C4%9Fukan-kutluay-291367198/',
+    href: "https://www.linkedin.com/in/do%C4%9Fukan-kutluay-291367198/",
   },
 ];
 function Footer() {
   return (
     <section id="footer" className={styles.footer}>
-      <Image alt="footer Logo" src={logo} width={50} height={50} />
+      <a href="/">
+        <Image alt="footer Logo" src={logo} width={50} height={50} />
+      </a>
       <p>
-        ©2022 Doğukan<span>Kutluay</span>. All Rights Reserved.
+        ©2022 Doğukan<span> Kutluay</span>. All Rights Reserved.
       </p>
       <div className={styles.footerSocils}>
         {socialDatas.map((item, index) => {
@@ -28,7 +30,8 @@ function Footer() {
               target="_blank"
               rel="noreferrer"
               key={index}
-              className={styles.footerSocial}>
+              className={styles.footerSocial}
+            >
               {item.icon}
             </a>
           );

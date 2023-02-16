@@ -19,7 +19,7 @@ const BookMark = ({ item }) => {
       <div className={styles.right}>
         <div className={styles.tags}>
           {item.tags.map((item, index) => (
-            <span key={index}>#{item}</span>
+            <div key={index}>#{item}</div>
           ))}
         </div>
       </div>
@@ -39,12 +39,11 @@ function Bookmarks() {
           <input
             onChange={({ target: { value } }) => {
               setValue(value);
-
               if (value.length < 1) {
                 setStateBookMarks(bookmarksData);
                 return;
               }
-              let newBookMarks = stateBookMarks.filter((item) =>
+              let newBookMarks = bookmarksData.filter((item) =>
                 (item.desc + item.title).toLocaleLowerCase().includes(value)
               );
               setStateBookMarks(newBookMarks);
