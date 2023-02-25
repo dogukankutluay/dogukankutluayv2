@@ -144,7 +144,7 @@ export const Vercel = () => {
         stroke-linejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
-        <path fill-rule="evenodd" d="M256,48,496,464H16Z"></path>
+        <path fillRule="evenodd" d="M256,48,496,464H16Z"></path>
       </g>
     </svg>
   );
