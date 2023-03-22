@@ -17,7 +17,7 @@ const socialDatas = [
 function Footer() {
   return (
     <section id="footer" className={styles.footer}>
-      <Link className={styles.cursor} href="/">
+      <Link passHref href="/">
         <Image alt="footer Logo" src={logo} width={50} height={50} />
       </Link>
       <p>
