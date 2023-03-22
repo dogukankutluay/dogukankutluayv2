@@ -43,6 +43,10 @@ export default function Home() {
           name="description"
           content="It is the official personal website of Doğukan Kutluay"
         />
+        <meta
+          property="og:image"
+          content="https://www.renticar.com/_vercel/image?url=https://cdn.renticar.com/campaign/e7e9ef6b-0fce-48fb-9d07-7ed25b65dcd4.jpeg&w=768&q=100"
+        />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="container">
