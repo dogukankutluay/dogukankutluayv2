@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../../styles/Footer.module.scss";
 import { InstagramIcon, LinkedinIcon } from "../../assets/icons";
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../../public/favicon.png";
 const socialDatas = [
   {
@@ -16,9 +17,9 @@ const socialDatas = [
 function Footer() {
   return (
     <section id="footer" className={styles.footer}>
-      <a href="/">
+      <Link className={styles.cursor} href="/">
         <Image alt="footer Logo" src={logo} width={50} height={50} />
-      </a>
+      </Link>
       <p>
         ©2022 Doğukan<span> Kutluay</span>. All Rights Reserved.
       </p>

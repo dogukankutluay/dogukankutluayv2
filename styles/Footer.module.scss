@@ -29,6 +29,9 @@
     }
   }
 }
+.cursor{
+  cursor: pointer;
+}
 @media (max-width: 720px) {
   .footer {
     flex-direction: column !important;
