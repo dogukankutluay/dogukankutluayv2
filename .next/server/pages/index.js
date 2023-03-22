@@ -99,6 +99,28 @@ module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 
 /***/ }),
 
+/***/ "../shared/lib/image-config-context":
+/*!***************************************************************!*\
+  !*** external "next/dist/shared/lib/image-config-context.js" ***!
+  \***************************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/image-config-context.js");
+
+/***/ }),
+
+/***/ "../shared/lib/is-plain-object":
+/*!**********************************************************!*\
+  !*** external "next/dist/shared/lib/is-plain-object.js" ***!
+  \**********************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/is-plain-object.js");
+
+/***/ }),
+
 /***/ "./loadable":
 /*!***************************************************!*\
   !*** external "next/dist/shared/lib/loadable.js" ***!

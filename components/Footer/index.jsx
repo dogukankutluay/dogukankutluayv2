@@ -18,7 +18,9 @@ function Footer() {
   return (
     <section id="footer" className={styles.footer}>
       <Link passHref href="/">
-        <Image alt="footer Logo" src={logo} width={50} height={50} />
+        <a>
+          <Image alt="footer Logo" src={logo} width={50} height={50} />
+        </a>
       </Link>
       <p>
         ©2022 Doğukan<span> Kutluay</span>. All Rights Reserved.
