@@ -1,5 +1,13 @@
 [
   {
+    "title": "Hammer.js",
+    "href": "https://hammerjs.github.io/examples/",
+    "picture": "https://hammerjs.github.io/examples/",
+    "desc": "Youtube bu teknolojiyi drag için kullanıyor",
+    "tags": ["Drag", "js"],
+    "link": "hammerjs.github.io"
+  },
+  {
     "title": "Ubuntu 16.04 Vsftpd",
     "href": "https://digitalocean.com/community/tutorials/how-to-set-up-vsftpd-for-a-user-s-directory-on-ubuntu-16-04",
     "picture": "https://rdl.ink/render/https%3A%2F%2Fdigitalocean.com%2Fcommunity%2Ftutorials%2Fhow-to-set-up-vsftpd-for-a-user-s-directory-on-ubuntu-16-04?width=92&height=69&ar=&mode=crop&format=avif&dpr=1",
@@ -2647,7 +2655,7 @@
     "href": "https://console.upstash.com/",
     "picture": "https://rdl.ink/render/https%3A%2F%2Fnosir.github.io%2Fcleave.js?width=92&height=69&ar=&mode=crop&format=avif&dpr=1",
     "desc": "Bu paket ile input yazılarınızı yazarken formatlayabilirsiniz.",
-    "tags": ["redis","cache"],
+    "tags": ["redis", "cache"],
     "link": "console.upstash.com"
   },
   {
