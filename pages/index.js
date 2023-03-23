@@ -38,7 +38,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://dogukankutluay.com*.vercel.app/api/og?title=Doğukan Kutluay"
+          content="https://dogukankutluay.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdogukan-kutluay-profile.ab9a9105.jpeg&w=640&q=75"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -51,7 +51,7 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="https://dogukankutluay.com*.vercel.app/api/og?title=Doğukan Kutluay"
+          content="https://dogukankutluay.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdogukan-kutluay-profile.ab9a9105.jpeg&w=640&q=75"
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
