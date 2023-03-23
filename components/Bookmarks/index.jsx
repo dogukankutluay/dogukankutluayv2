@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useMemo } from "react";
 import styles from "../../styles/Bookmarks.module.scss";
 import bookmarksData from "../../bookmarks.json";
-//import { SliderArrowLeft, SliderArrowRight } from '../../assets/icons';
 const BookMark = ({ item }) => {
   return (
     <a
@@ -30,6 +29,28 @@ function Bookmarks() {
   const [textValue, setValue] = useState("");
   const [stateBookMarks, setStateBookMarks] = useState(bookmarksData);
 
+  const search = ({ target: { value } }) => {
+    setValue(value);
+    if (value.length < 1) {
+      setStateBookMarks(bookmarksData);
+      return;
+    }
+    let newBookMarks = bookmarksData.filter((item) =>
+      (item.desc + item.title).toLocaleLowerCase().includes(value)
+    );
+    setStateBookMarks(newBookMarks);
+  };
+
+  const bookMarkRealList = useMemo(
+    () =>
+      stateBookMarks.length
+        ? stateBookMarks.map((item, index) => (
+            <BookMark key={index} item={item} />
+          ))
+        : "",
+
+    [stateBookMarks]
+  );
   return (
     <section id="bookmarks" className={styles.bookmarks}>
       <div className={styles.bookmarksHeader}>
@@ -37,17 +58,7 @@ function Bookmarks() {
 
         <div className={styles.inputWr}>
           <input
-            onChange={({ target: { value } }) => {
-              setValue(value);
-              if (value.length < 1) {
-                setStateBookMarks(bookmarksData);
-                return;
-              }
-              let newBookMarks = bookmarksData.filter((item) =>
-                (item.desc + item.title).toLocaleLowerCase().includes(value)
-              );
-              setStateBookMarks(newBookMarks);
-            }}
+            onChange={search}
             value={textValue}
             type="text"
             placeholder="Search "
@@ -66,13 +77,7 @@ function Bookmarks() {
         </div>
       </div>
       <div className={styles.bookmarksContent}>
-        <div className={styles.bookmarksList}>
-          {stateBookMarks.length
-            ? stateBookMarks.map((item, index) => (
-                <BookMark key={index} item={item} />
-              ))
-            : ""}
-        </div>
+        <div className={styles.bookmarksList}>{bookMarkRealList}</div>
         {!stateBookMarks.length && (
           <div className={styles.emptyBookmarks}>no rows to show</div>
         )}
