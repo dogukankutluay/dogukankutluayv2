@@ -1,15 +1,4 @@
 import Head from "next/head";
-/**
- * import {
-  Banner,
-  Contact,
-  Footer,
-  Navigation,
-  Projects,
-  Skills,
-  Bookmarks,
-} from "../components";
- */
 import dynamic from "next/dynamic";
 const Navigation = dynamic(() => import("../components/Navigation"), {
   ssr: true,
@@ -23,11 +12,7 @@ const Contact = dynamic(() => import("../components/Contact"), {
 const Footer = dynamic(() => import("../components/Footer"), {
   ssr: true,
 });
-/**
- * const Projects = dynamic(() => import("../components/Projects"), {
-  ssr: false,
-});
- */
+
 const Skills = dynamic(() => import("../components/Skills"), {
   ssr: true,
 });
@@ -43,13 +28,11 @@ export default function Home() {
           name="description"
           content="It is the official personal website of Doğukan Kutluay"
         />
-        {/** 
-         * <meta
+        <meta
           property="og:image"
-          content="https://www.renticar.com/_vercel/image?url=https://cdn.renticar.com/campaign/e7e9ef6b-0fce-48fb-9d07-7ed25b65dcd4.jpeg&w=768&q=100"
+          content="*.vercel.app/api/og?title=Doğukan Kutluay"
         />
-         * 
-        */}
+
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="container">
