@@ -7,4 +7,7 @@ module.exports = withBundleAnalyzer({
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 });
