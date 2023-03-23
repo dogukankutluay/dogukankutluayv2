@@ -28,11 +28,31 @@ export default function Home() {
           name="description"
           content="It is the official personal website of Doğukan Kutluay"
         />
+
+        <meta property="og:url" content="https://dogukankutluay.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Doğukan Kutluay" />
+        <meta
+          property="og:description"
+          content="It is the official personal website of Doğukan Kutluay"
+        />
         <meta
           property="og:image"
-          content="*.vercel.app/api/og?title=Doğukan Kutluay"
+          content="https://dogukankutluay.com*.vercel.app/api/og?title=Doğukan Kutluay"
         />
 
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="dogukankutluay.com" />
+        <meta property="twitter:url" content="https://dogukankutluay.com/" />
+        <meta name="twitter:title" content="Doğukan Kutluay" />
+        <meta
+          name="twitter:description"
+          content="It is the official personal website of Doğukan Kutluay"
+        />
+        <meta
+          name="twitter:image"
+          content="https://dogukankutluay.com*.vercel.app/api/og?title=Doğukan Kutluay"
+        />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="container">
