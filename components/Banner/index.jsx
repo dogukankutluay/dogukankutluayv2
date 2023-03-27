@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles/Banner.module.scss";
 import Image from "next/image";
-import myProfile from "../../assets/images/dogukan-kutluay-profile.jpeg";
+import myProfile from "../../assets/images/avatar.jpg";
 
 import { InstagramIcon, LinkedinIcon, Github } from "../../assets/icons";
 function Banner() {
@@ -35,7 +35,8 @@ function Banner() {
           </a>
         </li>
 
-        <li>
+        {/**
+       *    <li>
           <a
             target="_blank"
             rel="noreferrer"
@@ -45,6 +46,7 @@ function Banner() {
             <span>instagram</span>
           </a>
         </li>
+       */}
         <li>
           <a
             target="_blank"

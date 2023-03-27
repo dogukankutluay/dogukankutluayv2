@@ -6,10 +6,6 @@ import Link from "next/link";
 import logo from "../../public/favicon.png";
 const socialDatas = [
   {
-    icon: <InstagramIcon />,
-    href: "https://www.instagram.com/dogukan_kutluay/",
-  },
-  {
     icon: <LinkedinIcon />,
     href: "https://www.linkedin.com/in/do%C4%9Fukan-kutluay-291367198/",
   },
