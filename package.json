@@ -12,7 +12,7 @@
     "deploy": "curl -X POST https://api.vercel.com/v1/integrations/deploy/prj_0YKpbp5ASBHvFql0yHfvwwVR228N/cd0roGxIQ9"
   },
   "dependencies": {
-    "@next/bundle-analyzer": "^13.2.4",
+    "@next/bundle-analyzer": "^13.4.4",
     "@vercel/analytics": "^0.1.8",
     "@vercel/og": "^0.4.1",
     "mongoose": "^7.0.3",
