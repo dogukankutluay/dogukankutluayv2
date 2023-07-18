@@ -15,7 +15,7 @@
     "@next/bundle-analyzer": "^13.2.4",
     "@vercel/analytics": "^0.1.8",
     "@vercel/og": "^0.4.1",
-    "mongoose": "^7.0.3",
+    "mongoose": "^7.3.4",
     "next": "12.1.0",
     "react": "^17.0.2",
     "react-dom": "17.0.2",
